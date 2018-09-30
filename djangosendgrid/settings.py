@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django-sendgrid,'
+    
     #local
     'sendgrid',
 ]
@@ -127,7 +127,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 EMAIL_HOST = 'smtp.sendgrid.net'
-#EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = "sgbackend.SendGridBackend"
 SENDGRID_API_KEY = config('SENDGRID_API_KEY')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
