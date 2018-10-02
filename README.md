@@ -1,1 +1,1 @@
-sendgrid api attempt. not working yet
+this app will send an email out through a contact form.  Sendgrid backend is used.
