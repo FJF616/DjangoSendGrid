@@ -33,8 +33,10 @@ def contact_view(request):
         }
 
         contact_message =  get_template('contact_message.txt').render(context)
-
+        #send email using sendgrid api
         send_mail(subject, contact_message, from_email, to_email, fail_silently=True)
+        
+        # send email using post_office, custom backend may be specified
         # mail.send(
         #     to_email,
         #     from_email,
@@ -42,10 +44,10 @@ def contact_view(request):
         #     backend='sendgrid',
         # )
 
-        return render (request, "other.html", {})
+        return render (request, "sent.html", {})
     return HttpResponse(render(request, "index.html", {}))
 
-def home(request):
-    return HttpResponseRedirect(render(request, "other.html", {}))
+def sent(request):
+    return HttpResponseRedirect(render(request, "sent.html", {}))
 
   
