@@ -128,8 +128,8 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 SENDGRID_EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 SENDGRID_API_KEY = config('SENDGRID_API_KEY')
 SENDGRID_EMAIL_USERNAME = config('EMAIL_HOST_USER')
 SENDGRID_EMAIL_PASSWORD = config('EMAIL_HOST_USER_PASSWORD')
@@ -137,7 +137,7 @@ SENDGRID_EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 ACCOUNT_EMAIL_SUBJECT_PREFIX =  'Contact email received from website'
-
+# SENDGRID_EMAIL_USERNAME ='django_sendgrid'
 POST_OFFICE = {
     'BACKENDS': {
         'default': 'smtp.EmailBackend',

@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('email/', views.contact_view, name='index'),
-    path('sent/', views.sent, name='sent'),
+    path('sent/', views.sent_view, name='sent'),
    
 ]
 

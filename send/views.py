@@ -44,10 +44,10 @@ def contact_view(request):
         #     backend='sendgrid',
         # )
 
-        return render (request, "sent.html", {})
-    return HttpResponse(render(request, "index.html", {}))
+        return redirect('sent')
+    return render(request, "index.html", {})
 
-def sent(request):
-    return HttpResponseRedirect(render(request, "sent.html", {}))
+def sent_view(request):
+    return HttpResponse('success! thanks for the message')
 
   
