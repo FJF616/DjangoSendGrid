@@ -29,9 +29,9 @@
 			<div class="contact1-pic js-tilt" data-tilt>
 				<img src="{% static 'images/img-01.png' %}" alt="IMG">
 			</div>
-
-			<form  method="POST" action="." class="contact1-form validate-form">
+			<form  method="post" action="." class="contact1-form validate-form">
 				{% csrf_token %}
+
 				<span class="contact1-form-title">
 					Get in touch
 				</span>
@@ -52,7 +52,7 @@
 				</div>
 
 				<div class="wrap-input1 validate-input" data-validate = "Message is required">
-					<input class="input1" type="text" name="message" placeholder="Enter your Message"></input>
+					<input class="input1" type="text" name="message" placeholder="Enter your Message">
 					<span class="shadow-input1"></span>
 				</div>
 
