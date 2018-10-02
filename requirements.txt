@@ -1,3 +1,4 @@
+Django==2.1.1
 python_decouple==3.1
-Django==2.0
-django-sendgrid==1.0.1
+django_post_office==3.1.0
+django-sendgrid-v5==0.6.893
